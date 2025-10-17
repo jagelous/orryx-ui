@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 
-export default function Home() {
+export default function CopyDashboard() {
   return (
     <Layout>
       <div className="space-y-6">
