@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import EstimatedUsageChart from "@/components/charts/EstimatedUsageChart";
+import HistoryTable from "@/components/HistoryTable";
 import { useState } from "react";
 
 export default function FundWallet() {
@@ -314,6 +315,11 @@ export default function FundWallet() {
               )}
             </div>
           </div>
+        </div>
+
+        {/* Deposit History Section */}
+        <div className="mt-6">
+          <HistoryTable title="Deposit History" />
         </div>
       </div>
     </Layout>
