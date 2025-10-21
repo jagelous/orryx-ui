@@ -1,21 +1,16 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import Header from "@/components/header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="">
-      <SidebarProvider className="p-12">
+    <div className="flex h-screen bg-[#0d0d0d]">
+      <SidebarProvider>
         <AppSidebar />
-        <main className="flex-1">
-          <div className="flex h-screen">
-            <div className="flex-1 p-4">
-              <div className="mb-4">
-                <SidebarTrigger />
-              </div>
-              {children}
-            </div>
-          </div>
-        </main>
+        <div className="pl-16 flex w-full flex-col">
+          <Header />
+          <main className=" p-4 overflow-auto">{children}</main>
+        </div>
       </SidebarProvider>
     </div>
   );
